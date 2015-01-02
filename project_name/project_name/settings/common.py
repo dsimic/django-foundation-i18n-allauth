@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'django_static',
+    'allauth',
+    'allauth.account',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,7 +62,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
-    '%s.context_processors.git' % PROJECT_NAME
+    '%s.context_processors.git' % PROJECT_NAME,
+    # Required by allauth template tags
+    "django.core.context_processors.request",
+    # allauth specific context processors
+    "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount",
 )
 
 TEMPLATE_DIRS = (
@@ -122,3 +129,13 @@ DJANGO_STATIC_SAVE_PREFIX = os.path.join(
 DJANGO_STATIC_MEDIA_ROOTS = [sdir + "/../" for sdir in STATICFILES_DIRS]
 
 STATICFILES_DIRS += (DJANGO_STATIC_SAVE_PREFIX + "/static/", )
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
