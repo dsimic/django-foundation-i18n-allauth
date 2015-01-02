@@ -3,3 +3,4 @@ django-annoying
 cssmin
 slimmer
 django-static
+django-allauth
