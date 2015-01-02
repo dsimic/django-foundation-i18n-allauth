@@ -20,7 +20,7 @@ pip install django
 
 Run django startproject with the --template option
 ```sh
-django-admin.py startproject --template=https://github.com/dsimic/django-foundation/archive/master.zip project_name
+django-admin.py startproject --template=https://github.com/dsimic/django-foundation-i18n-allauth/archive/master.zip project_name
 ```
 
 Install requirements, for development
