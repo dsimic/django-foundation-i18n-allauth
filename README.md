@@ -5,6 +5,7 @@
 * django-static
 * django-debug-toolbar
 * django-extensions
+* django-allauth
 
 ### How to use
 Create virtual environment, change project_name with your projects name :D
@@ -25,6 +26,11 @@ django-admin.py startproject --template=https://github.com/dsimic/django-foundat
 Install requirements, for development
 ```sh
 pip install -r requirements/development.txt
+```
+
+Make django static dir, from project root:
+```sh
+mkdir -p project_name/public/django-static/static
 ```
 
 Set 'PROJECT_ENV' environment variable.

@@ -55,4 +55,4 @@ target/
 
 # public, static
 */public/static/
-*/public/django-static/
+*/public/django-static/static/*
