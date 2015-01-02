@@ -33,6 +33,8 @@ Make django static dir, from project root:
 mkdir -p project_name/public/django-static/static
 ```
 
+Modify LICENSE.md and README.md to suite your needs.
+
 Set 'PROJECT_ENV' environment variable.
 * 'development'
 * 'production',
