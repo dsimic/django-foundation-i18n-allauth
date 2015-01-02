@@ -59,3 +59,4 @@ target/
 # public, static
 */public/static/
 */public/django-static/static/*
+!*/public/django-static/static/.gitkeep
