@@ -60,3 +60,7 @@ target/
 */public/static/
 */public/django-static/static/*
 !*/public/django-static/static/.gitkeep
+
+# db
+*.db
+*.sqlite3
