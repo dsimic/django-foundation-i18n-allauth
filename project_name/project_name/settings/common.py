@@ -11,7 +11,10 @@ from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', '..')
+
+DB_DIR = os.path.join(BASE_DIR, '..', 'www')
 
 PROJECT_NAME = "{{project_name}}"  # must be name of project python module
 
@@ -90,7 +93,7 @@ WSGI_APPLICATION = '%s.wsgi.application' % PROJECT_NAME
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(DB_DIR, 'db.sqlite3'),
     }
 }
 
